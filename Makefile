@@ -7,7 +7,7 @@ USER_ID := 1000
 
 .PHONY: demo-build
 demo-build:
-	docker build --rm -f docker/Dockerfile \
+	docker build --rm -f local.dockerfile \
 		--build-arg WORKING_ENV=dev \
 		--target demo-main \
 		-t $(DOCKER_IMAGE_DEMO) .
@@ -15,20 +15,20 @@ demo-build:
 
 .PHONY: demo-run
 demo-run:
-	docker run --rm -it -p 80:8080 \
+	docker run --rm -it -p 80:80 \
 		--env TOKENIZERS_PARALLELISM=true \
 		$(DOCKER_IMAGE_DEMO)
 
 
 .PHONY: demo-bash
 demo-bash:
-	docker run --rm -it -p 80:8080 \
+	docker run --rm -it -p 80:80 \
 		$(DOCKER_IMAGE_DEMO) /bin/bash
 
 
 .PHONY: demo-frontend-build
 demo-frontend-build:
-	docker build --no-cache --rm -f docker/Dockerfile \
+	docker build --no-cache --rm -f local.dockerfile \
 		--target frontend-builder \
 		-t $(DOCKER_IMAGE_DEMO_FRONTEND) .
 

@@ -55,7 +55,7 @@ def make_app(settings: Settings) -> FastAPI:
 
     origins = [
         "http://0.0.0.0",
-        "http://0.0.0.0:8080",
+        "http://0.0.0.0:80",
     ]
     app.add_middleware(
         CORSMiddleware,
@@ -92,6 +92,6 @@ if __name__ == "__main__":
     settings = Settings()
     app = make_app(settings)
 
-    run_application(app, {"bind": "0.0.0.0:8080"})
+    run_application(app, {"bind": "0.0.0.0:80"})
 
 

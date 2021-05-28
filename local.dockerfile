@@ -19,9 +19,11 @@ USER root
 
 RUN useradd -m -u 1000 -d /home/app app
 
-COPY docker/requirements.txt /tmp/requirements.txt
+COPY requirements.txt /tmp/requirements.txt
 RUN pip install --upgrade pip
 RUN pip install -r /tmp/requirements.txt
+
+EXPOSE 80
 
 USER app
 
