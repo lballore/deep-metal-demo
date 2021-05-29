@@ -9,8 +9,10 @@
   import Footer from "./components/Footer.svelte";
 </script>
 
-<!-- Meta tags for SEO -->
-<Seo />
+<svelte:head>
+  <!-- Meta tags for SEO -->
+  <Seo />
+</svelte:head>
 
 <!-- Navbar -->
 <Navbar />
