@@ -22,16 +22,16 @@
     images: [
       {
         url: META.COVER_IMG.URL,
-        alt: META.COVER_IMG.ALT,
+        alt: META.COVER_IMG.ALT
       }
     ],
-    url: META.URL,
+    url: META.URL
   }}
   twitter={{
     site: "@LBallore",
     title: META.TITLE,
     description: META.DESCRIPTION,
     image: META.COVER_IMG.URL,
-    imageAlt: META.COVER_IMG.ALT,
+    imageAlt: META.COVER_IMG.ALT
   }}
 />
