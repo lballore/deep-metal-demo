@@ -54,8 +54,8 @@ def make_app(settings: Settings) -> FastAPI:
     app.include_router(api_router, prefix=f"/api/{API_VERSION}")
 
     origins = [
-        "http://0.0.0.0",
-        "http://0.0.0.0:80",
+        "http://localhost",
+        "http://127.0.0.1:80",
     ]
     app.add_middleware(
         CORSMiddleware,
