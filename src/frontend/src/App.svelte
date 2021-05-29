@@ -1,5 +1,4 @@
 <script>
-  import Seo from "./components/Seo.svelte";
   import Navbar from "./components/Navbar.svelte";
   import Banner from "./components/Banner.svelte";
   import Project from "./components/Project.svelte";
@@ -8,11 +7,6 @@
   import Social from "./components/Social.svelte";
   import Footer from "./components/Footer.svelte";
 </script>
-
-<svelte:head>
-  <!-- Meta tags for SEO -->
-  <Seo />
-</svelte:head>
 
 <!-- Navbar -->
 <Navbar />
