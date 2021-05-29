@@ -39,7 +39,7 @@
     });
     const data = await response.json();
     toggleGenerateButton("activate");
-    console.log(cleanLyrics(data["lyrics"][0]["generated_text"]))  // REMOVE!
+
     return cleanLyrics(data["lyrics"][0]["generated_text"])
   }
 
