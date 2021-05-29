@@ -1,19 +1,14 @@
 from typing import List, Dict, Optional
 
-from fastapi import APIRouter, HTTPException, Header
+from fastapi import APIRouter, HTTPException
 
 from datatypes import GenerateLyricsRequest, GenerateLyricsResponse
 from libs.deepmetal import GENERATOR_MODEL, generate_lyrics
 
 API_VERSION = "v1"
 
-def make_api_router(settings):
+def make_api_router(settings) -> APIRouter:
     app = APIRouter()
-
-
-    @app.get("/test")
-    def test() -> str:
-        return "Test"
 
 
     @app.post("/generate", response_model=GenerateLyricsResponse)

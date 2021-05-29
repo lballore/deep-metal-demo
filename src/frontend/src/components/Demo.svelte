@@ -44,7 +44,7 @@
   }
 
   function cleanLyrics(inputStr) {
-    return inputStr.replace(/^[a-z0-9\,\.\'\n ]+/, '').trim();
+    return inputStr.replace(/^[a-z0-9!?\,\.\'\n ]+/, '').trim();
   }
 
   onMount(() => {

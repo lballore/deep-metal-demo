@@ -50,20 +50,19 @@ def make_app(settings: Settings) -> FastAPI:
     )
     logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 
-    api_router = make_api_router(settings)
-    app.include_router(api_router, prefix=f"/api/{API_VERSION}")
-
     origins = [
         "http://localhost",
-        "http://127.0.0.1:80",
+        "https://localhost",
     ]
     app.add_middleware(
         CORSMiddleware,
         allow_origins=origins,
-        allow_credentials=True,
+        allow_credentials=False,
         allow_methods=["*"],
-        allow_headers=["*"],
     )
+
+    api_router = make_api_router(settings)
+    app.include_router(api_router, prefix=f"/api/{API_VERSION}")
 
     app.mount(
         "/static",
