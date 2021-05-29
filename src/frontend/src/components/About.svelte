@@ -22,7 +22,7 @@
 <!----------------MARKUP----------------------->
 <!------------------------------------------->
 
-<section id="testimonials" class="section">
+<section id="about-me" class="section">
   <div class="container">
     <h1 class="title text-center deepmetal-logo mb-3">About me</h1>
     <div class="row justify-content-md-center section-body">
