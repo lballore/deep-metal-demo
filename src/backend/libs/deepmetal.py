@@ -1,6 +1,6 @@
 from typing import Dict, List
 
-from transformers import pipeline, set_seed
+from transformers import pipeline
 from transformers.pipelines.base import Pipeline
 
 from config import HyperParameters

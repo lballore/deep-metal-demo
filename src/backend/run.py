@@ -5,7 +5,6 @@ import sys
 from gunicorn.app.base import BaseApplication
 
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
@@ -42,11 +41,11 @@ def run_application(app: FastAPI, options: dict = {}) -> None:
 
 def make_app(settings: Settings) -> FastAPI:
     app = FastAPI(
-        title = "DeepMetal API",
-        description = "AI-powered heavy metal lyrics generator.",
-        version = "0.0.1",
-        docs_url = None if settings.ENVIRONMENT == "pro" else "/docs",
-        redoc_url = None
+        title="DeepMetal API",
+        description="AI-powered heavy metal lyrics generator.",
+        version="v0.9.1-beta",
+        docs_url=None if settings.ENVIRONMENT == "pro" else "/docs",
+        redoc_url=None
     )
     logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 
@@ -81,5 +80,3 @@ if __name__ == "__main__":
     app = make_app(settings)
 
     run_application(app, {"bind": "0.0.0.0:80"})
-
-
