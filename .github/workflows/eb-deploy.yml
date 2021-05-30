@@ -13,7 +13,7 @@ jobs:
       uses: actions/checkout@v1
       
     - name: Elastic Beanstalk Deployment
-      uses: kumarshivam12/Aws-ElasticBeanstalk@v1.4
+      uses: kumarshivam12/Aws-ElasticBeanstalk@v1.3
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_KEY }}
