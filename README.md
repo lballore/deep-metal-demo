@@ -18,3 +18,11 @@ make demo-build demo-run
 ```
 
 The application should then be reachable at your lohalhost address: `http://127.0.0.1`
+
+### Tests
+
+To execute unit tests in a Docker environment, just run
+
+```
+make demo-test-build demo-test-run
+```
