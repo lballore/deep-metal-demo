@@ -36,6 +36,9 @@
         text_inputs: textInputs,
         temperature: temperature.toFixed(2),
       }),
+      headers: {
+        'Content-Type': 'application/json'
+      },
     });
     const data = await response.json();
     toggleGenerateButton("activate");
