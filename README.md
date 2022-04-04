@@ -5,7 +5,6 @@ A little SPA able to demonstrate some capabilities of the **DeepMetal** model, b
 
 For more info about the model, please look at the [GitHub repo](https://github.com/lucone83/deep-metal) or at the [model card on HuggingFace](https://huggingface.co/lucone83/deep-metal).
 
-This demo application is publicly available at https://www.deepmetal.ai
 
 ## How to use
 
